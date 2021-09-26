@@ -10,8 +10,8 @@ In the license.txt, you will have to copy your license username in the first lin
 
 ## Download Docker Image from Dockerhub
 
-    docker run manudev2004/screaming-frog --build-arg crawl_folder="/home/crawls"
+    docker pull manudev2004/screaming-frog
 
 Now you are ready to run your first crawl, for example:
 
-    sf --crawl nike.com --headless --save-crawl --output-folder /home/crawls --timestamped-output --export-format csv
+    docker run -t manudev200476/screaming-frog -e "crawl_folder=/home/sf/crawls" --crawl nike.com --headless
