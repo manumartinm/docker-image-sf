@@ -1,9 +1,6 @@
 FROM phusion/baseimage:master
 
-ARG username
-ARG license_key
-
-ARG crawl_folder
+ENV crawl_folder=/home/crawls
 
 RUN apt-get update && apt-get install -y \
     wget \
