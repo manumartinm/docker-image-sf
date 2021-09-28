@@ -1,7 +1,5 @@
 FROM phusion/baseimage:master
 
-ENV crawl_folder=/home/crawls
-
 RUN apt-get update && apt-get install -y \
     wget \
     xdg-utils \
@@ -15,11 +13,12 @@ RUN wget --no-verbose https://download.screamingfrog.co.uk/products/seo-spider/s
     apt-get install -f -y
 
 COPY license.txt /root/.ScreamingFrogSEOSpider/licence.txt
+
 COPY spider.config /root/.ScreamingFrogSEOSpider/spider.config
 
-RUN mkdir ${crawl_folder}
+COPY .screamingfrogseospider ~/.screamingfrogseospider
 
-RUN echo 'alias sf="screamingfrog"' >> ~/.bashrc
+RUN mkdir /home/crawls
 
 ENTRYPOINT ["/usr/bin/screamingfrogseospider"]
 
