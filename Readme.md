@@ -2,7 +2,7 @@
 
 With this docker image you can run screaming frog in less than a minute
 
-First of all you have to install Docker and Git in your VM, VPS or whatever you are using
+First of all you have to install Docker, Git and a text editor like Nano or VIM
 
 ## Clone this repository
 
