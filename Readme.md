@@ -26,4 +26,11 @@ After configure all the thing that I have told you you have to build the image
 
 ## Run a crawl
 
-    docker run image-id --crawl nike.com --headless
+First we will create a volumen
+    
+    docker volume create mi_volumen
+    
+Now, we will run sf
+
+    docker run -d -it --name screaming-frog -v mi_volumen:/home/crawls ejemplo-01 --crawl nike.com --headless
+
