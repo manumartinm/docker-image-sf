@@ -1,4 +1,4 @@
-## Dokcer Image to run Screaming Frog
+## Docker Image to run Screaming Frog
 
 With this docker image you can run screaming frog in less than a minute
 
